@@ -6,6 +6,10 @@ const App = () => {
   const [tmpTodo, setTmpTodo] = useState("");
 
   const addTodo = () => {
+    if (tmpTodo === "") {
+      alert("Please input message");
+      return;
+    }
     setTodos([...todos, tmpTodo]);
     setTmpTodo("");
   };
